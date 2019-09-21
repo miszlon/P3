@@ -26,11 +26,17 @@ namespace AppNo2
                 {
                     Console.Write("I");
                 }
+                
 
             }
             Console.ReadKey();
 
             if (imie == "Miłosz")
+                Console.WriteLine("\nzgadłeś!");
+            else Console.WriteLine("Nie zgadłeś :(");
+            
+
+            if (imie == "Kacper")
                 Console.WriteLine("\nzgadłeś!");
             else Console.WriteLine("Nie zgadłeś :(");
             Console.ReadKey();
