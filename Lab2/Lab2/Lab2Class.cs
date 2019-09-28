@@ -6,20 +6,38 @@ namespace Lab2
 {
     class Lab2Class
     {
+        
         static int iloscProduktow = 0;
+
         public static void Prdoukty()
         {
+           
             string escape = "exit";
-
-            while(Console.ReadLine() != escape)
+            string odpowiedz = "";
+            while (!odpowiedz.Equals(escape))
             {
-                Console.WriteLine(UnikalnaNazwa(iloscProduktow++));
+                odpowiedz = Console.ReadLine();
+                switch(odpowiedz)
+                {
+                    case "1":
+                        UnikalnaNazwa("1");
+                        break;
+                    case "2":
+                        UnikalnaNazwa("2");
+                        break;
+                    case "3":
+                        UnikalnaNazwa("3");
+                        break;
+
+                }
+
             }
         }
 
-        static string UnikalnaNazwa(int numer)
+        static void UnikalnaNazwa(string nazwaProduktu)
         {
-            return "Produkt " + numer;
+            iloscProduktow++;
+            Console.WriteLine("Produkt ["+nazwaProduktu+"]");
         }
 
 
