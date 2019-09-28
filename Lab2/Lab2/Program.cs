@@ -6,16 +6,27 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
-            string odpowiedz = Console.ReadLine();
-            int liczba = Convert.ToInt32(odpowiedz);
+            //string odpowiedz = Console.ReadLine();
+            //int liczba = Convert.ToInt32(odpowiedz);
 
-            if (liczba % 2 == 0)
+            //Console.WriteLine((liczba % 2 ==0) ? "Parzysta" : "Nieparzysta");
+
+            int odleglosc = -1;
+            int licznik = 0;
+            int sumaOdleglosci = 0;
+
+            float sredniaOdleglosc = 0;
+
+            while (odleglosc !=0)
             {
-                Console.WriteLine("Parzysta");
-            }
-            else Console.WriteLine("Nieparzysta");
+                string odpowiedz = Console.ReadLine();
 
-            Console.Read();
+                odleglosc = Convert.ToInt32(odpowiedz);
+                sumaOdleglosci += odleglosc;
+                licznik++;
+            }
+            sredniaOdleglosc = (float)sumaOdleglosci / (licznik - 1);
+            Console.WriteLine("średnia odleglość to: {0}" ,sredniaOdleglosc);
         }
     }
 }
