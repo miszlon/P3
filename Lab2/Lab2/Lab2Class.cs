@@ -11,7 +11,7 @@ namespace Lab2
 
         public static void Prdoukty()
         {
-           
+            
             string escape = "exit";
             string odpowiedz = "";
             while (!odpowiedz.Equals(escape))
