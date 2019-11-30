@@ -6,6 +6,7 @@ namespace Kolokwium1_Poprawa
     {
         static void Main(string[] args)
         {
+           
             //Zadanie 1
             Console.WriteLine("--------------");
             Console.WriteLine("ZADANIE 1");
@@ -33,6 +34,7 @@ namespace Kolokwium1_Poprawa
             Console.WriteLine("ZADANIE 3");
             Console.WriteLine("--------------");
             Zadanie3.Slownik();
+
         }
     }
 }

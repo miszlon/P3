@@ -10,32 +10,6 @@ namespace Kolokwium1_Poprawa
         public static void Slownik()
         {
             string[,] slownik = new string[2, 5];
-            wpisywanieWyrazow();
-            string Slowo;
-            Console.Write("Proszę podać które słowo chcesz przetłumaczyć: ");
-            Slowo = Console.ReadLine();
-            for (int i = 0; i < slownik.GetLength(0); i++)
-            {
-                for (int j = 0; j < slownik.GetLength(1); j++)
-                {
-                    if (Slowo == slownik[i, j])
-                    {
-                        Console.WriteLine(slownik[i + 1, j]);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Brak takiego słowa w słowniku");
-
-                    }
-                }
-            }
-        }
-
-        public static void wpisywanieWyrazow()
-        {
-            
-            string[,] slownik = new string[2, 5];
-
             for (int i = 0; i < slownik.GetLength(0); i++)
             {
                 for (int j = 0; j < slownik.GetLength(1); j++)
@@ -52,6 +26,28 @@ namespace Kolokwium1_Poprawa
                     }
                 }
             }
+            string Slowo;
+            Console.Write("Proszę podać które słowo chcesz przetłumaczyć: ");
+            Slowo = Console.ReadLine();
+            for (int i = 0; i < slownik.GetLength(0); i++)
+            {
+                for (int j = 0; j < slownik.GetLength(1); j++)
+                {
+                    if (Slowo == slownik[i, j])
+                    {
+                        Console.WriteLine(slownik[i + 1, j]);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Brak takiego słowa w słowniku");
+                        break;
+                    }
+                }
+            }
+
+
+            
+
         }
     }
 }
