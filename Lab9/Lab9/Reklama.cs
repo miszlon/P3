@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab9
+namespace lab_ix
 {
     class Reklama
     {
         public string Tekst;
-        public PrzedzialWiekowy przedzialWiekowy;
-        public Zaintersowania zainteresowania;
+        public PrzedzialWiekowy PrzedzialWiekowy;
+        public Zainteresowania Zainteresowania;
 
-        public Reklama(string tekst, PrzedzialWiekowy przedzialWiekowy, Zaintersowania zainteresowania)
+        public Reklama(string tekst, PrzedzialWiekowy przedzialWiekowy, Zainteresowania zainteresowania)
         {
             Tekst = tekst;
-            this.przedzialWiekowy = przedzialWiekowy;
-            this.zainteresowania = zainteresowania;
+            PrzedzialWiekowy = przedzialWiekowy;
+            Zainteresowania = zainteresowania;
         }
 
-        public void Commercial()
+        public void Test()
         {
-            if (przedzialWiekowy.HasFlag(PrzedzialWiekowy.Dzieci))
-                Console.WriteLine("Reklama dla Dzieci");
+            if (PrzedzialWiekowy.HasFlag(PrzedzialWiekowy.Dzieci))
+                Console.WriteLine("Reklama dla dzieci");
 
-            if(przedzialWiekowy >= PrzedzialWiekowy.Dorosli)
-                Console.WriteLine("Reklama dla Dorosłych");
+            if (PrzedzialWiekowy >= PrzedzialWiekowy.Dorosli)
+                Console.WriteLine("Reklama dla dorosłych");
         }
     }
 }

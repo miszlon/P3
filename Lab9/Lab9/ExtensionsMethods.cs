@@ -2,47 +2,45 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab9
+namespace lab_ix
 {
     public static class ExtensionsMethods
-    {  
+    {
+        public static bool hasForChild(this PrzedzialWiekowy przedzialWiekowy)
+        {
+            return (przedzialWiekowy <= PrzedzialWiekowy.Mlodziez);
+
+        }
         public static (int, int) DzielenieZReszta(this int liczba, int dzielnik)
         {
-
-             return (liczba / dzielnik, liczba % dzielnik);
+            return (liczba / dzielnik, liczba % dzielnik);
         }
 
-        public static int CountingChars(this string tekst, char c)
+        public static int LetterCounter(this string str, char c, bool sensitive)
         {
+
             int sum = 0;
 
-            foreach (var item in tekst)
-                if (item == c) sum++;
-
-            return sum;
-        }
-
-        public static int CountingChars(this string tekst, char litera, bool caseInvariant)
-        {
-            int sum = 0;
-            
-            foreach (var item in tekst)
+            foreach (var item in str)
             {
-                bool existLetter;
-                if (caseInvariant)
-                    existLetter = (item == litera);
+                bool existsLetter;
+
+                if (sensitive || !char.IsLetter(c))
+                    existsLetter = (item == c);
                 else
-                    existLetter = (item == char.ToUpper(litera) || item == char.ToLower(litera));
+                    existsLetter = (item == char.ToUpper(c) || item == char.ToLower(c));
+
+
+                if (existsLetter)
+                    sum++;
             }
+
             return sum;
         }
 
-        public static bool CzyDlaNiepelnoletnich(this PrzedzialWiekowy przedzial)
+        public static int LetterCounter(this string str, char c)
         {
-            if (przedzial <= PrzedzialWiekowy.Mlodziez)
-                return true;
-            return false;
+            return LetterCounter(str, c, false);
         }
-
     }
 }
