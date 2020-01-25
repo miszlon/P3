@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace _054486
+namespace Kolokwium2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
