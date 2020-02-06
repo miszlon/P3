@@ -23,8 +23,7 @@ namespace Kolokwium_2_poprawa
             ZamekElektroniczny.KartaManget();
 
             List<IZamek> zamek = new List<IZamek>();
-
-
+            
         }
     }
 }
