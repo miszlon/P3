@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace Kolokwium_2_P3_Poprawa_6_luty
 {
@@ -10,7 +11,12 @@ namespace Kolokwium_2_P3_Poprawa_6_luty
         {
             List<Produkt> produkty = new List<Produkt>();
 
+            produkty.Add(new Produkt());
+
+
         }
+
+        
 
 
     }
